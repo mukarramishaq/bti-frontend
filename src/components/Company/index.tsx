@@ -1,2 +1,2 @@
 export * from "./CompanyStockOverviewComponent";
-export * from "./CompanyStockOverviewWrapper";
+export * from "./CompaniesOverview";

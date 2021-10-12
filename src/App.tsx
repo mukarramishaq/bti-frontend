@@ -1,10 +1,9 @@
 import React from "react";
 import Grid from "@mui/material/Grid";
-import {
-  QueryClient,
-  QueryClientProvider,
-} from "react-query";
-import { CompanyStockOverviewWrapper } from "components/CompanyStockOverview";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { CompaniesOverview } from "components/Company";
+import { HighestMarketPrices } from "components/HighestPrices";
+import { ExchangesOverview } from "components/Exchange";
 
 const queryClient = new QueryClient();
 
@@ -17,11 +16,16 @@ function App() {
         direction="row"
         justifyContent="center"
         alignItems="center"
-        var
+        style={{ marginTop: "20px", marginBottom: "20px" }}
       >
         <Grid item>
-        <CompanyStockOverviewWrapper />
-
+          <CompaniesOverview />
+        </Grid>
+        <Grid item>
+          <HighestMarketPrices />
+        </Grid>
+        <Grid item>
+          <ExchangesOverview />
         </Grid>
       </Grid>
     </QueryClientProvider>
