@@ -1,6 +1,31 @@
-# Getting Started with Create React App
+# Bill the Investor Dashboard
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is dashboard app bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## How to start
+
+In the project directory:
+
+1. Rename the `.env.sample` to `.env` and replace with values to that of yours.
+
+2. Install the dependencies through `yarn install`
+
+3. Start the development server through `yarn start`
+
+## How to start using Docker
+
+In the project directory:
+
+1. Rename the `.env.sample` to `.env` and replace with values to that of yours.
+
+2. To build image with production ready build, use `Dockerfile.prod` and to use development build, use `Dockerfile`
+
+3. Build the docker image using the following command:
+   1. > docker build . -t btiapp:1.0.0 -f {DockerfilePath}
+
+4. Run built docker image using the following command:
+   1. > docker run -p 5000:8000 --env PORT=8000 --env REACT_APP_API_BASE_URL="http://localhost:4000" btiapp:1.0.0
+   2. App will be accessible on localhost:5000
 
 ## Available Scripts
 
