@@ -7,9 +7,9 @@ WORKDIR /app
 # install app dependencies
 COPY package.json ./
 RUN yarn install
+ENV PATH="./node_modules/.bin:$PATH"
 # add app
 COPY . ./
-RUN yarn build
 EXPOSE ${PORT:-3000}
 # start app
-CMD ["serve","-s", "build", "-l", ${PORT:-3000}]
+CMD ["yarn", "start"]
